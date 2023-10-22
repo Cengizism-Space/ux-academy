@@ -19,12 +19,15 @@ import { previewUrl } from 'sanity-plugin-iframe-pane/preview-url'
 
 import authorType from 'schemas/author'
 import categoryType from 'schemas/category'
+import sectionType from 'schemas/section'
 import blockContentType from 'schemas/blockContent'
 import postType from 'schemas/post'
 import settingsType from 'schemas/settings'
 
+const schemaTypes = [authorType, categoryType, sectionType, blockContentType, postType, settingsType]
+
 const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Alten UX Academy'
 
 export default defineConfig({
   basePath: '/studio',
@@ -32,8 +35,7 @@ export default defineConfig({
   dataset,
   title,
   schema: {
-    // If you want more content types, you can add them to this array
-    types: [authorType, categoryType, blockContentType, postType, settingsType],
+    types: schemaTypes,
   },
   plugins: [
     deskTool({
