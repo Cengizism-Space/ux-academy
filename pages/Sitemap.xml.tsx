@@ -51,7 +51,8 @@ export default function SiteMap() {
   // getStaticProps will do the heavy lifting
 }
 
-export async function getStaticProps() { // { res }
+// Reverted from getServerSideProps
+export async function getStaticProps(/*{ res }*/) {
   const client = getClient()
 
   // Get list of Post urls
