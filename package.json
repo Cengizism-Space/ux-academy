@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-blog-cms-sanity-v3",
+  "name": "ux-academy",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -19,7 +19,6 @@
     "@sanity/client": "6.6.0",
     "@sanity/image-url": "1.0.2",
     "@sanity/vision": "3.18.1",
-    "@vercel/og": "0.5.19",
     "classnames": "2.3.2",
     "date-fns": "2.30.0",
     "intl-segmenter-polyfill": "0.4.4",
