@@ -1,4 +1,4 @@
-import IndexPage, { type IndexPageProps } from 'components/IndexPage'
+import IndexPage, { type IndexPageProps } from 'components/Blog/IndexPage'
 import {
   indexQuery,
   type Post,
