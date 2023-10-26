@@ -1,22 +1,22 @@
 import Container from 'components/Blog/BlogContainer'
 import BlogHeader from 'components/Blog/BlogHeader'
 import Layout from 'components/Blog/BlogLayout'
-import HeroPost from 'components/Post/HeroPost'
+import HeroCard from 'components/Card/HeroCard'
 import IndexPageHead from 'components/Blog/IndexPageHead'
-import MoreStories from 'components/Post/MoreStories'
+import MoreCards from 'components/Card/MoreCards'
 import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
+import type { Card, Settings } from 'lib/sanity.queries'
 
 export interface IndexPageProps {
   preview?: boolean
   loading?: boolean
-  posts: Post[]
+  cards: Card[]
   settings: Settings
 }
 
 export default function IndexPage(props: IndexPageProps) {
-  const { preview, loading, posts, settings } = props
-  const [heroPost, ...morePosts] = posts || []
+  const { preview, loading, cards, settings } = props
+  const [heroCard, ...moreCards] = cards || []
   const { title = demo.title, description = demo.description } = settings || {}
 
   return (
@@ -26,17 +26,17 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} description={description} level={1} />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+          {heroCard && (
+            <HeroCard
+              title={heroCard.title}
+              coverImage={heroCard.coverImage}
+              date={heroCard.date}
+              source={heroCard.source}
+              slug={heroCard.slug}
+              summary={heroCard.summary}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {moreCards.length > 0 && <MoreCards cards={moreCards} />}
         </Container>
       </Layout>
     </>

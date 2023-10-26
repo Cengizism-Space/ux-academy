@@ -1,4 +1,4 @@
-import { getAllPosts, getClient } from 'lib/sanity.client'
+import { getAllCards, getClient } from 'lib/sanity.client'
 
 type SitemapLocation = {
   url: string
@@ -55,22 +55,22 @@ export default function SiteMap() {
 export async function getStaticProps(/*{ res }*/) {
   const client = getClient()
 
-  // Get list of Post urls
-  const [posts = []] = await Promise.all([getAllPosts(client)])
-  const postUrls: SitemapLocation[] = posts
+  // Get list of Card urls
+  const [cards = []] = await Promise.all([getAllCards(client)])
+  const cardUrls: SitemapLocation[] = cards
     .filter(({ slug = '' }) => slug)
-    .map((post) => {
+    .map((card) => {
       return {
-        url: `/posts/${post.slug}`,
+        url: `/cards/${card.slug}`,
         priority: 0.5,
-        lastmod: new Date(post._updatedAt),
+        lastmod: new Date(card._updatedAt),
       }
     })
 
   // ... get more routes here
 
   // Return the default urls, combined with dynamic urls above
-  const locations = [...defaultUrls, ...postUrls]
+  const locations = [...defaultUrls, ...cardUrls]
 
   // Set response to XML
   // res.setHeader('Content-Type', 'text/xml')
