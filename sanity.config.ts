@@ -32,7 +32,7 @@ const schemaTypes = [
 ]
 
 const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Alten UX Academy'
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'UX Academy'
 
 export default defineConfig({
   basePath: '/studio',
