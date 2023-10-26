@@ -1,6 +1,6 @@
-import Container from 'components/Blog/BlogContainer'
-import BlogHeader from 'components/Blog/BlogHeader'
-import Layout from 'components/Blog/BlogLayout'
+import Container from 'components/Library/LibraryContainer'
+import LibraryHeader from 'components/Library/LibraryHeader'
+import Layout from 'components/Library/LibraryLayout'
 import MoreCards from 'components/Card/MoreCards'
 import CardBody from 'components/Card/CardBody'
 import CardHeader from 'components/Card/CardHeader'
@@ -37,7 +37,7 @@ export default function CardPage(props: CardPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} level={2} />
+          <LibraryHeader title={title} level={2} />
           {preview && !card ? (
             <CardTitle>Loading…</CardTitle>
           ) : (

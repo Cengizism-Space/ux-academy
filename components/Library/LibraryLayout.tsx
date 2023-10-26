@@ -1,6 +1,6 @@
-import AlertBanner from 'components/Blog/AlertBanner'
+import AlertBanner from 'components/Library/AlertBanner'
 
-export default function BlogLayout({
+export default function LibraryLayout({
   preview,
   loading,
   children,

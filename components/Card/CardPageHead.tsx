@@ -1,4 +1,4 @@
-import BlogMeta from 'components/Blog/BlogMeta'
+import LibraryMeta from 'components/Library/LibraryMeta'
 import * as demo from 'lib/demo.data'
 import { urlForImage } from 'lib/sanity.image'
 import { Card, Settings } from 'lib/sanity.queries'
@@ -14,7 +14,7 @@ export default function CardPageHead({ settings, card }: CardPageHeadProps) {
   return (
     <Head>
       <title>{card.title ? `${card.title} | ${title}` : title}</title>
-      <BlogMeta />
+      <LibraryMeta />
       {card.coverImage?.asset?._ref && (
         <meta
           property="og:image"

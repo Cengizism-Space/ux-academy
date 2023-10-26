@@ -1,4 +1,4 @@
-import IndexPage, { type IndexPageProps } from 'components/Blog/IndexPage'
+import IndexPage, { type IndexPageProps } from 'components/Library/IndexPage'
 import {
   indexQuery,
   type Card,

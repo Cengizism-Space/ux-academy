@@ -1,9 +1,9 @@
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 
-import styles from './BlogHeader.module.css'
+import styles from './LibraryHeader.module.css'
 
-export default function BlogHeader({
+export default function LibraryHeader({
   title,
   description,
   level,

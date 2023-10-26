@@ -1,8 +1,8 @@
-import Container from 'components/Blog/BlogContainer'
-import BlogHeader from 'components/Blog/BlogHeader'
-import Layout from 'components/Blog/BlogLayout'
+import Container from 'components/Library/LibraryContainer'
+import LibraryHeader from 'components/Library/LibraryHeader'
+import Layout from 'components/Library/LibraryLayout'
 import HeroCard from 'components/Card/HeroCard'
-import IndexPageHead from 'components/Blog/IndexPageHead'
+import IndexPageHead from 'components/Library/IndexPageHead'
 import MoreCards from 'components/Card/MoreCards'
 import * as demo from 'lib/demo.data'
 import type { Card, Settings } from 'lib/sanity.queries'
@@ -25,7 +25,7 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} description={description} level={1} />
+          <LibraryHeader title={title} description={description} level={1} />
           {heroCard && (
             <HeroCard
               title={heroCard.title}

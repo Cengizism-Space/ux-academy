@@ -85,7 +85,7 @@ async function queryStaleRoutes(
       if ((body.slug as any)?.current) {
         staleRoutes.push(`/cards/${(body.slug as any).current}`)
       }
-      // Assume that the card document was deleted. Query the datetime used to sort "More stories" to determine if the card was in the list.
+      // Assume that the card document was deleted. Query the datetime used to sort "More cards" to determine if the card was in the list.
       const moreCards = await client.fetch(
         groq`count(
           *[_type == "card"] | order(date desc, _updatedAt desc) [0...3] [dateTime(date) > dateTime($date)]
