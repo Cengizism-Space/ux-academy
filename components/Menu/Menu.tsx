@@ -6,10 +6,10 @@ export default function Menu() {
     <>
       <ul>
         <li className="inline">
-          <Link href="/">Home</Link>
+          <Link className='text-teal-600 hover:underline' href="/">Home</Link>
         </li>
         <li className="inline ml-2">
-          <Link href="/protected">Protected</Link>
+          <Link className='text-teal-600 hover:underline' href="/protected">Protected</Link>
         </li>
       </ul>
       <LoginButton />
