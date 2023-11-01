@@ -3,6 +3,9 @@ import AzureADProvider from 'next-auth/providers/azure-ad'
 
 export const authOptions = {
   secret: process.env.SECRET,
+  pages: {
+    signIn: '/auth/signIn',
+  },
   providers: [
     AzureADProvider({
       clientId: process.env.AZURE_AD_CLIENT_ID,
