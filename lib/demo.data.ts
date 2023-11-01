@@ -52,4 +52,5 @@ export const description = [
   },
 ]
 
-export const ogImageTitle = 'A Next.js Library with a Native Authoring Experience'
+export const ogImageTitle =
+  'A Next.js Library with a Native Authoring Experience'

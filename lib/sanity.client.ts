@@ -1,10 +1,10 @@
 import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
 import {
-  indexQuery,
   type Card,
   cardAndMoreCardsQuery,
   cardBySlugQuery,
   cardSlugsQuery,
+  indexQuery,
   type Settings,
   settingsQuery,
 } from 'lib/sanity.queries'

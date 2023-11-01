@@ -28,11 +28,10 @@ const schemaTypes = [
   cardType,
   blockContentType,
   sourceType,
-  settingsType
+  settingsType,
 ]
 
-const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'UX Academy'
+const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'UX Academy'
 
 export default defineConfig({
   basePath: '/studio',

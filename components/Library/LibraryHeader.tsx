@@ -1,6 +1,6 @@
 import { PortableText } from '@portabletext/react'
-import Link from 'next/link'
 import Menu from 'components/Menu/Menu'
+import Link from 'next/link'
 
 import styles from './LibraryHeader.module.css'
 
@@ -38,9 +38,9 @@ export default function LibraryHeader({
         <header className="mb-10 mt-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
           <div className="md:pr-8">
             <h2 className="text-6xl font-bold leading-tight tracking-tighter md:text-8xl">
-            <Link href="/" className="hover:underline">
-              {title}
-            </Link>
+              <Link href="/" className="hover:underline">
+                {title}
+              </Link>
             </h2>
             <h4
               className={`mt-1 text-center text-lg md:text-left ${styles.portableText}`}

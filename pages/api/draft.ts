@@ -16,7 +16,7 @@ function redirectToPreview(
 ): void {
   // Enable Draft Mode by setting the cookies
   res.setDraftMode({ enable: true })
-  
+
   // Redirect to a preview capable route
   res.writeHead(307, { Location })
   res.end()

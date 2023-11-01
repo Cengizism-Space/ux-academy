@@ -1,12 +1,11 @@
 import Container from 'components/Library/LibraryContainer'
 import LibraryHeader from 'components/Library/LibraryHeader'
-import LibraryMeta from 'components/Library/LibraryMeta'
 import Layout from 'components/Library/LibraryLayout'
+import LibraryMeta from 'components/Library/LibraryMeta'
 import * as demo from 'lib/demo.data'
 import type { Settings } from 'lib/sanity.queries'
-import { useSession, getSession } from "next-auth/react"
-
 import Head from 'next/head'
+import { getSession, useSession } from 'next-auth/react'
 
 export interface ProtectedPageProps {
   preview?: boolean
@@ -20,11 +19,11 @@ export default function ProtectedPage(props: ProtectedPageProps) {
 
   const { data: session, status } = useSession()
 
-  if (status === "loading") {
+  if (status === 'loading') {
     return <p>Loading...</p>
   }
 
-  if (status === "unauthenticated") {
+  if (status === 'unauthenticated') {
     return (
       <>
         <Head>

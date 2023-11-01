@@ -1,7 +1,7 @@
-import Avatar from 'components/Card/SourceAvatar'
-import CoverImage from 'components/Card/CoverImage'
 import Date from 'components/Card/CardDate'
 import CardTitle from 'components/Card/CardTitle'
+import CoverImage from 'components/Card/CoverImage'
+import Avatar from 'components/Card/SourceAvatar'
 import type { Card } from 'lib/sanity.queries'
 
 export default function CardHeader(

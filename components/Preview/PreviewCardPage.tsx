@@ -11,13 +11,9 @@ export default function PreviewCardPage(props: CardPageProps) {
   const [{ card: cardPreview, moreCards }, loadingCard] = useLiveQuery<{
     card: Card
     moreCards: Card[]
-  }>(
-    { card: props.card, moreCards: props.moreCards },
-    cardAndMoreCardsQuery,
-    {
-      slug: props.card.slug,
-    },
-  )
+  }>({ card: props.card, moreCards: props.moreCards }, cardAndMoreCardsQuery, {
+    slug: props.card.slug,
+  })
   const [settings, loadingSettings] = useLiveQuery<Settings>(
     props.settings,
     settingsQuery,

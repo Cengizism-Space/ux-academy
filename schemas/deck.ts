@@ -23,9 +23,9 @@ export default defineType({
           title: 'Path',
           name: 'path',
           type: 'reference',
-          to: [{ type: 'path' }]
-        }
-      ]
+          to: [{ type: 'path' }],
+        },
+      ],
     }),
     defineField({
       name: 'cover',

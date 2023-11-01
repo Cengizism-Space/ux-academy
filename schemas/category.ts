@@ -18,9 +18,9 @@ export default defineType({
           title: 'Deck',
           name: 'deck',
           type: 'reference',
-          to: [{ type: 'deck' }]
-        }
-      ]
+          to: [{ type: 'deck' }],
+        },
+      ],
     }),
     defineField({
       name: 'description',

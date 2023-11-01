@@ -1,9 +1,9 @@
+import HeroCard from 'components/Card/HeroCard'
+import MoreCards from 'components/Card/MoreCards'
+import IndexPageHead from 'components/Library/IndexPageHead'
 import Container from 'components/Library/LibraryContainer'
 import LibraryHeader from 'components/Library/LibraryHeader'
 import Layout from 'components/Library/LibraryLayout'
-import HeroCard from 'components/Card/HeroCard'
-import IndexPageHead from 'components/Library/IndexPageHead'
-import MoreCards from 'components/Card/MoreCards'
 import * as demo from 'lib/demo.data'
 import type { Card, Settings } from 'lib/sanity.queries'
 

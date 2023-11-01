@@ -1,7 +1,7 @@
 import IndexPage, { type IndexPageProps } from 'components/Library/IndexPage'
 import {
-  indexQuery,
   type Card,
+  indexQuery,
   type Settings,
   settingsQuery,
 } from 'lib/sanity.queries'

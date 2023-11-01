@@ -1,6 +1,6 @@
-import SourceAvatar from 'components/Card/SourceAvatar'
-import CoverImage from 'components/Card/CoverImage'
 import Date from 'components/Card/CardDate'
+import CoverImage from 'components/Card/CoverImage'
+import SourceAvatar from 'components/Card/SourceAvatar'
 import type { Card } from 'lib/sanity.queries'
 import Link from 'next/link'
 

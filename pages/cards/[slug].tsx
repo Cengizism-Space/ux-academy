@@ -3,8 +3,8 @@ import PreviewCardPage from 'components/Preview/PreviewCardPage'
 import { readToken } from 'lib/sanity.api'
 import {
   getAllCardsSlugs,
-  getClient,
   getCardAndMoreCards,
+  getClient,
   getSettings,
 } from 'lib/sanity.client'
 import { Card, Settings } from 'lib/sanity.queries'
