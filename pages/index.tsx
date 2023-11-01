@@ -3,7 +3,7 @@ import PreviewIndexPage from 'components/Preview/PreviewIndexPage'
 import { readToken } from 'lib/sanity.api'
 import { getAllCards, getClient, getSettings } from 'lib/sanity.client'
 import { Card, Settings } from 'lib/sanity.queries'
-import { GetStaticProps } from 'next'
+import { GetStaticProps, GetStaticPropsResult } from 'next'
 import type { SharedPageProps } from 'pages/_app'
 
 interface PageProps extends SharedPageProps {
@@ -25,7 +25,9 @@ export default function Page(props: PageProps) {
   return <IndexPage cards={cards} settings={settings} />
 }
 
-export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
+export const getStaticProps: GetStaticProps<PageProps, Query> = async (
+  ctx,
+): Promise<GetStaticPropsResult<PageProps>> => {
   const { draftMode = false } = ctx
   const client = getClient(draftMode ? { token: readToken } : undefined)
 

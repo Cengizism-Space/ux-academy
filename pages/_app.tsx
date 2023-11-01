@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import { lazy } from 'react'
 
 export interface SharedPageProps {
-  session: any
+  session?: any
   draftMode: boolean
   token: string
 }

@@ -8,7 +8,7 @@ import {
   getSettings,
 } from 'lib/sanity.client'
 import { Card, Settings } from 'lib/sanity.queries'
-import { GetStaticProps } from 'next'
+import { GetStaticProps, GetStaticPropsResult } from 'next'
 import type { SharedPageProps } from 'pages/_app'
 
 interface PageProps extends SharedPageProps {
@@ -33,7 +33,9 @@ export default function ProjectSlugRoute(props: PageProps) {
   return <CardPage card={card} moreCards={moreCards} settings={settings} />
 }
 
-export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
+export const getStaticProps: GetStaticProps<PageProps, Query> = async (
+  ctx,
+): Promise<GetStaticPropsResult<PageProps>> => {
   const { draftMode = false, params = {} } = ctx
   const client = getClient(draftMode ? { token: readToken } : undefined)
 
