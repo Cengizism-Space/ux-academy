@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './components/**/*.{js,ts,jsx,tsx}',
-    './intro-template/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './plugins/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    // typography: (theme) => ({}),
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
@@ -38,5 +39,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/typography')
+  ],
 }

@@ -1,20 +1,22 @@
 import { toPlainText } from '@portabletext/react'
-import LibraryMeta from 'components/Library/LibraryMeta'
+import PageMeta from 'components/Page/Meta'
 import * as demo from 'lib/demo.data'
 import { Settings } from 'lib/sanity.queries'
 import Head from 'next/head'
 
-export interface IndexPageHeadProps {
+interface PageHeadProps {
   settings: Settings
 }
 
-export default function IndexPageHead({ settings }: IndexPageHeadProps) {
+export default function PageHead({ settings }: PageHeadProps) {
   const { title = demo.title, description = demo.description } = settings
 
   return (
     <Head>
       <title>{title}</title>
-      <LibraryMeta />
+
+      <PageMeta />
+
       <meta
         key="description"
         name="description"
