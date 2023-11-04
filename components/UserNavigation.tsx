@@ -34,6 +34,7 @@ export default function UserNavigation() {
                   mt-4 
                   md:mt-0`}
         >
+          Logout
           <svg
             fill="none"
             stroke="currentColor"

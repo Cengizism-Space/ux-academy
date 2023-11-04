@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 
+import Search from './Search'
 import Navigation from './Navigation'
 import ThemeSwitcher from './ThemeSwitcher'
 import UserNavigation from './UserNavigation'
@@ -77,8 +78,8 @@ export default function Skeleton({ children }) {
                 </svg>
                 <span className="ml-3 text-xl">Alten Decks</span>
               </Link>
-
               <Navigation />
+              <Search />
               <UserNavigation />
             </div>
           </header>
