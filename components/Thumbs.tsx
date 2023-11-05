@@ -14,7 +14,7 @@ export default function Thumbs(props: PageProps) {
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4">
         {title}
       </h1>
-      <div className="flex flex-wrap -m-2">
+      <div className="flex flex-wrap">
         {thumbs.map((thumb, i) => (
           <Thumb key={i} thumb={thumb} />
         ))}

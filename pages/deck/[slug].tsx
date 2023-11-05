@@ -1,17 +1,13 @@
-import IndexPage from 'components/Library/IndexPage'
-import PreviewIndexPage from 'components/Preview/PreviewIndexPage'
 import Skeleton from 'components/Skeleton'
 import { iThumb } from 'components/Thumb'
 import Thumbs from 'components/Thumbs'
+import { findCardsByDeck,findDeck } from 'lib/decks.api'
 import * as demo from 'lib/demo.data'
-import { readToken } from 'lib/sanity.api'
-import { getAllCards, getClient, getSettings } from 'lib/sanity.client'
-import { Card, Settings } from 'lib/sanity.queries'
 import { GetStaticProps, GetStaticPropsResult } from 'next'
-import type { SharedPageProps } from 'pages/_app'
 
 interface PageProps {
   deck: iThumb
+  cards: Array<iThumb>
 }
 
 interface Query {
@@ -19,35 +15,24 @@ interface Query {
 }
 
 export default function Page(props: PageProps) {
-  const { deck } = props
-
-  console.log(deck)
+  const { deck, cards } = props
 
   return (
     <Skeleton>
       <section>
-        <span className="block text-3xl title-font font-medium text-gray-500">
-          {deck.title}
-        </span>
+        <Thumbs title={deck.title} thumbs={cards} />
       </section>
     </Skeleton>
   )
 }
 
 export const getStaticProps: GetStaticProps<PageProps, Query> = async (
-  ctx,
+  context,
 ): Promise<GetStaticPropsResult<PageProps>> => {
-  const { params = {} } = ctx
+  const { params = {} } = context
 
-  const slugs = demo.mockDecks
-
-  function findDeck(arr, slug) {
-    return arr.find((el) => {
-      return el.slug === slug
-    })
-  }
-
-  const deck = findDeck(slugs, params.slug)
+  const deck = findDeck(demo.mockDecks, params.slug)
+  const cards = findCardsByDeck(deck.id)
 
   if (!deck) {
     return {
@@ -58,6 +43,7 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (
   return {
     props: {
       deck,
+      cards,
     },
   }
 }

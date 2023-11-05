@@ -12,10 +12,8 @@ export interface iThumb {
   slug: string
   image: string
   description: string
-  footnote?: {
-    total: number
-    note: string
-  }
+  totals?: number
+  footnote?: string
 }
 
 interface PageProps {
@@ -23,7 +21,7 @@ interface PageProps {
 }
 
 export default function Thumb(props: PageProps) {
-  const { _type, slug, parent, title, image, description, footnote } =
+  const { _type, slug, parent, title, image, description, totals, footnote } =
     props.thumb
 
   return (
@@ -59,7 +57,7 @@ export default function Thumb(props: PageProps) {
             </span>
             {footnote && (
               <span className="body-font italic text-gray-500 text-sm">
-                {footnote.total} {footnote.note}
+                {totals} {footnote}
               </span>
             )}
           </div>

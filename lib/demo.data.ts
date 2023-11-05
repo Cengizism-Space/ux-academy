@@ -45,10 +45,8 @@ export const latestDecks = [
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 23,
-      note: 'cards in total',
-    },
+    totals: 23,
+    footnote: 'cards in total',
   },
   {
     _type: 'deck',
@@ -58,10 +56,8 @@ export const latestDecks = [
     image: 'image-3fd0ff83429349397106563ede103baa05d268d3-7692x5760-jpg',
     description:
       'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 60,
-      note: 'cards in total',
-    },
+    totals: 60,
+    footnote: 'cards in total',
   },
   {
     _type: 'deck',
@@ -85,10 +81,8 @@ export const mockDecks = [
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 23,
-      note: 'cards in total',
-    },
+    totals: 23,
+    footnote: 'cards in total',
   },
   {
     _type: 'deck',
@@ -99,10 +93,8 @@ export const mockDecks = [
     image: 'image-3fd0ff83429349397106563ede103baa05d268d3-7692x5760-jpg',
     description:
       'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 60,
-      note: 'cards in total',
-    },
+    totals: 60,
+    footnote: 'cards in total',
   },
   {
     _type: 'deck',
@@ -114,103 +106,25 @@ export const mockDecks = [
     description:
       'Brief explaination of the deck. Maybe some few words as well.',
   },
-  {
-    _type: 'deck',
-    id: 104,
-    parent: 'Path 1',
-    title: 'Deck 104',
-    slug: 'deck-104',
-    image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 23,
-      note: 'cards in total',
-    },
-  },
-  {
-    _type: 'deck',
-    id: 105,
-    parent: 'Path 1',
-    title: 'Deck 105',
-    slug: 'deck-105',
-    image: 'image-3fd0ff83429349397106563ede103baa05d268d3-7692x5760-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 60,
-      note: 'cards in total',
-    },
-  },
-  {
-    _type: 'deck',
-    id: 106,
-    parent: 'Path 3',
-    title: 'Deck 106',
-    slug: 'deck-106',
-    image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-  },
-  {
-    _type: 'deck',
-    id: 107,
-    parent: 'Path 1',
-    title: 'Deck 107',
-    slug: 'deck-107',
-    image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 23,
-      note: 'cards in total',
-    },
-  },
-  {
-    _type: 'deck',
-    id: 108,
-    parent: 'Path 2',
-    title: 'Deck 108',
-    slug: 'deck-108',
-    image: 'image-3fd0ff83429349397106563ede103baa05d268d3-7692x5760-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-    footnote: {
-      total: 60,
-      note: 'cards in total',
-    },
-  },
-  {
-    _type: 'deck',
-    id: 109,
-    parent: 'Path 3',
-    title: 'Deck 109',
-    slug: 'deck-109',
-    image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
-    description:
-      'Brief explaination of the deck. Maybe some few words as well.',
-  },
 ]
 
 export const latestCards = [
   {
     _type: 'card',
     id: 1,
-    parent: 'Category 5',
-    title: 'Card title 7',
+    parent: 'Category 1',
+    title: 'Card title 1',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 3,
-      note: 'times bookmarked',
-    },
+    totals: 3,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 2,
     parent: 'Category 2',
-    title: 'Card title 3',
+    title: 'Card title 2',
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
@@ -218,14 +132,12 @@ export const latestCards = [
   {
     _type: 'card',
     id: 3,
-    title: 'Card title 1',
+    title: 'Card title 3',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 51,
-      note: 'times bookmarked',
-    },
+    totals: 51,
+    footnote: 'times bookmarked',
   },
 ]
 
@@ -233,21 +145,23 @@ export const mockCards = [
   {
     _type: 'card',
     id: 1,
+    deck: 102,
     parent: 'Category 1',
-    title: 'Card title 1',
+    title: 'Card 1',
+    slug: 'card-1',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 3,
-      note: 'times bookmarked',
-    },
+    totals: 3,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 2,
+    deck: 100,
     parent: 'Category 2',
-    title: 'Card title 2',
+    title: 'Card 2',
+    slug: 'card-2',
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
@@ -255,33 +169,35 @@ export const mockCards = [
   {
     _type: 'card',
     id: 3,
-    title: 'Card title 3',
+    deck: 100,
+    title: 'Card 3',
+    slug: 'card-3',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 51,
-      note: 'times bookmarked',
-    },
+    totals: 51,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 4,
+    deck: 102,
     parent: 'Category 1',
-    title: 'Card title 1',
+    title: 'Card 4',
+    slug: 'card-4',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 3,
-      note: 'times bookmarked',
-    },
+    totals: 3,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 5,
+    deck: 103,
     parent: 'Category 2',
-    title: 'Card title 2',
+    title: 'Card 5',
+    slug: 'card-5',
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
@@ -289,33 +205,34 @@ export const mockCards = [
   {
     _type: 'card',
     id: 6,
-    title: 'Card title 3',
+    title: 'Card 6',
+    slug: 'card-6',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 51,
-      note: 'times bookmarked',
-    },
+    totals: 51,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 7,
+    deck: 103,
     parent: 'Category 1',
-    title: 'Card title 1',
+    title: 'Card 7',
+    slug: 'card-7',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 3,
-      note: 'times bookmarked',
-    },
+    totals: 3,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 8,
+    deck: 102,
     parent: 'Category 2',
-    title: 'Card title 2',
+    title: 'Card 8',
+    slug: 'card-8',
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
@@ -323,33 +240,35 @@ export const mockCards = [
   {
     _type: 'card',
     id: 9,
-    title: 'Card title 3',
+    deck: 103,
+    title: 'Card 9',
+    slug: 'card-9',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 51,
-      note: 'times bookmarked',
-    },
+    totals: 51,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 10,
+    deck: 100,
     parent: 'Category 1',
-    title: 'Card title 1',
+    title: 'Card 10',
+    slug: 'card-10',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 3,
-      note: 'times bookmarked',
-    },
+    totals: 3,
+    footnote: 'times bookmarked',
   },
   {
     _type: 'card',
     id: 11,
+    deck: 100,
     parent: 'Category 2',
-    title: 'Card title 2',
+    title: 'Card 11',
+    slug: 'card-11',
     image: 'image-2e85232598acec705813b46b51785ea0db986b88-4096x2733-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
@@ -357,13 +276,13 @@ export const mockCards = [
   {
     _type: 'card',
     id: 12,
-    title: 'Card title 3',
+    deck: 103,
+    title: 'Card 12',
+    slug: 'card-12',
     image: 'image-16194cc0f43deca099dc57341858a5d2b19fb40e-4256x2832-jpg',
     description:
       'Some more text about the card. This is a short summary. Supposed to be catchy and short summery of it.',
-    footnote: {
-      total: 51,
-      note: 'times bookmarked',
-    },
+    totals: 51,
+    footnote: 'times bookmarked',
   },
 ]
