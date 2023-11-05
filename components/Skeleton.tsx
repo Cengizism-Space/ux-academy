@@ -4,8 +4,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 
-import Search from './Search'
+import Footer from './Footer'
 import Navigation from './Navigation'
+import Search from './Search'
 import ThemeSwitcher from './ThemeSwitcher'
 import UserNavigation from './UserNavigation'
 
@@ -86,6 +87,8 @@ export default function Skeleton({ children }) {
           {children}
         </div>
       </main>
+
+      <Footer />
     </>
   )
 }

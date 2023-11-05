@@ -15,7 +15,7 @@ interface Query {
   [key: string]: string
 }
 
-export default function Page(props: PageProps) {
+export default function DeckCopy(props: PageProps) {
   const { cards, settings, draftMode } = props
 
   if (draftMode) {

@@ -1,15 +1,21 @@
 import Skeleton from 'components/Skeleton'
+import Thumbs from 'components/Thumbs'
+import { mockDecks } from 'lib/demo.data'
 
 export default function DecksPage() {
+  const decksByPath = mockDecks.reduce((grouped, deck) => {
+    if (!grouped[deck.parent]) grouped[deck.parent] = []
+    grouped[deck.parent].push(deck)
+    return grouped
+  }, {})
+
   return (
     <>
       <Skeleton>
         <section>
-          <div className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-              Decks
-            </h1>
-          </div>
+          {Object.keys(decksByPath).map((path, i) => (
+            <Thumbs key={i} title={path} thumbs={decksByPath[path]} />
+          ))}
         </section>
       </Skeleton>
     </>
