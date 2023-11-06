@@ -6,7 +6,7 @@ import React from 'react'
 
 import Footer from './Footer'
 import Navigation from './Navigation'
-import Search from './Search'
+// import Search from './Search'
 import ThemeSwitcher from './ThemeSwitcher'
 import UserNavigation from './UserNavigation'
 
@@ -80,7 +80,7 @@ export default function Skeleton({ children }) {
                 <span className="ml-3 text-xl">Alten Decks</span>
               </Link>
               <Navigation />
-              <Search />
+              {/* <Search /> */}
               <UserNavigation />
             </div>
           </header>

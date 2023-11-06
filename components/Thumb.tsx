@@ -26,7 +26,7 @@ export default function Thumb(props: PageProps) {
 
   return (
     <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
-      <Link href={'/deck/' + slug}>
+      <Link href={(_type === 'deck' ? '/deck/' : '/card/') + slug}>
         <div
           className={`h-full 
                       flex 
