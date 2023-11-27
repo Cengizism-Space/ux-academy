@@ -20,6 +20,8 @@ interface PageProps {
   thumb: iThumb
 }
 
+// src={urlForImage(image).height(100).width(200).url()}
+
 export default function Thumb(props: PageProps) {
   const { _type, slug, parent, title, image, description, totals, footnote } =
     props.thumb
@@ -49,7 +51,7 @@ export default function Thumb(props: PageProps) {
               width={200}
               height={100}
               alt={title}
-              src={urlForImage(image).height(100).width(200).url()}
+              src={`/images/` + image}
               sizes="100vw"
             />
             <span className="block text-gray-500 text-xl my-4">

@@ -10,8 +10,8 @@ export default function HomePage() {
     <>
       <Skeleton>
         <section>
-          <Thumbs title="Latest decks" thumbs={latestDecks} />
           <Thumbs title="Latest cards" thumbs={latestCards} />
+          <Thumbs title="Latest decks" thumbs={latestDecks} />
         </section>
       </Skeleton>
     </>

@@ -1,5 +1,10 @@
 import { groq } from 'next-sanity'
 
+// export const decksQuery = groq`
+// *[_type == "deck"] | order(date desc, _updatedAt desc) {
+//   ${cardFields}
+// }`
+
 const cardFields = groq`
   _id,
   title,
